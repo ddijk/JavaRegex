@@ -20,38 +20,29 @@ public class AppTest {
     public void testReplaceFirst() {
 
         String input = "<a>${for-month-5}</a>";
-        assertEquals("<a>20170919</a>", TokenReplacer.replaceFirstMonthTokens(input));
-    }
-
-    @Test
-    public void testReplaceOnlyFirst() {
-
-        String input = "<a>${for-month-5}</a><a>${for-month-5}</a>";
-        assertEquals("<a>20170919</a><a>${for-month-5}</a>", TokenReplacer.replaceFirstMonthTokens(input));
+        assertEquals("<a>20170919</a>", TokenReplacer.replaceMonthTokens(input));
     }
 
     @Test
     public void testReplaceRepeating() {
 
         String input = "<a>${for-month-5}</a><a>${for-month-2}</a>";
-        String replacedFirst = TokenReplacer.replaceFirstMonthTokens(input);
-        System.out.println("replacedFirst:"+ replacedFirst);
-        String replacedSecond = TokenReplacer.replaceFirstMonthTokens(replacedFirst);
-        assertEquals("<a>20170919</a><a>20171219</a>", replacedSecond);
+        String actual = TokenReplacer.replaceMonthTokens(input);
+        assertEquals("<a>20170919</a><a>20171219</a>", actual);
     }
 
     @Test
     public void testOneMonthBack() {
 
         String expected = LocalDate.now().minusMonths(1).format(BASIC_ISO_DATE);
-        assertEquals(expected, TokenReplacer.calculateDate("${for-month-1}"));
+        assertEquals(expected, TokenReplacer.replaceMonthTokens("${for-month-1}"));
     }
 
     @Test
     public void testTwoMonthsBack() {
 
         String expected = LocalDate.now().minusMonths(2).format(BASIC_ISO_DATE);
-        assertEquals(expected, TokenReplacer.calculateDate("${for-month-2}"));
+        assertEquals(expected, TokenReplacer.replaceMonthTokens("${for-month-2}"));
     }
 
     @Test
@@ -65,12 +56,11 @@ public class AppTest {
 
     @Test
     public void testReplaceSingleDate() {
-//        final String input = "${for-month-(\\d)}";
 
         String input = "<a>${for-month-5}</a>";
 
 
-        assertEquals("<a>20170919</a>", TokenReplacer.replaceFirstMonthTokens(input));
+        assertEquals("<a>20170919</a>", TokenReplacer.replaceMonthTokens(input));
     }
 
     @Test
@@ -104,31 +94,10 @@ public class AppTest {
 
     @Test
     public void test2() {
-        final String REGEX_FOR_MONTHS_BACK = "\\$\\{for-month-(\\d)\\}";
-        Pattern p = Pattern.compile(REGEX_FOR_MONTHS_BACK);
 
         String input = "<a>${for-month-5}</a><a>${for-month-2}</a>";
-        Matcher m = p.matcher(input);
-        StringBuffer sb = new StringBuffer();
-        while (m.find()) {
-          //  m.appendReplacement(sb, formatDate(Integer.parseInt("$1")));
-            m.appendReplacement(sb,doit( "$1"));
-        }
-        m.appendTail(sb);
-        System.out.println(sb.toString());
-        assertEquals("one dog two dogs in the yard", sb.toString());
+        assertEquals("<a>20170919</a><a>20171219</a>", TokenReplacer.replaceMonthTokens(input));
     }
-
-    private String doit(String $1) {
-
-        String str = $1;
-        System.out.println("str="+str);
-        return $1;
-    }
-//        String str = $1;
-//        System.out.println("str="+str);
-//        return formatDate(Integer.parseInt( "3"));
-//    }
 
     private String formatDate(int n) {
         LocalDate oneMonthBack = LocalDate.now().minusMonths(n);

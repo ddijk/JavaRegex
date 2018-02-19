@@ -9,39 +9,29 @@ import static java.time.format.DateTimeFormatter.BASIC_ISO_DATE;
 public class TokenReplacer {
 
     final static String REGEX_FOR_MONTHS_BACK = "\\$\\{for-month-(\\d)\\}";
-    final static String REGEX_FOR_MONTHS_BACK_GREEDY = String.format(".*%s.*", REGEX_FOR_MONTHS_BACK);
 
 
-    public static String replaceFirstMonthTokens(String xml) {
-        return xml.replaceFirst(REGEX_FOR_MONTHS_BACK, calculateDate(xml));
+    /**
+     * Replace token by actual date. E.g. replace ${for-month-3} by 20180105.
+     * @param input String, typically XML, that contains zero or more tokens
+     * @return input with all the 'for-month-n' tokens replaced by actual dates.
+     */
+    public static String replaceMonthTokens(String input) {
+        Pattern p = Pattern.compile(REGEX_FOR_MONTHS_BACK);
 
-    }
-
-    static String calculateDate(String xml) {
-
-
-        int n = getNumberOfMonthsFromToken(xml);
-
-        System.out.println("n:"+n);
-
-        LocalDate oneMonthBack = LocalDate.now().minusMonths(n);
-
-        return oneMonthBack.format(BASIC_ISO_DATE);
-
-    }
-
-    static int getNumberOfMonthsFromToken(String inputXml) {
-
-
-        Pattern pattern = Pattern.compile(REGEX_FOR_MONTHS_BACK_GREEDY);
-        Matcher matcher = pattern.matcher(inputXml);
-        if (!matcher.matches()) {
-            throw new IllegalArgumentException("token not found: " + inputXml);
+        Matcher m = p.matcher(input);
+        StringBuffer sb = new StringBuffer();
+        while (m.find()) {
+            m.appendReplacement(sb, formatDate(Integer.parseInt(m.group(1))));
         }
+        m.appendTail(sb);
+        return sb.toString();
+    }
 
+    private static String formatDate(int n) {
+        LocalDate nMonthsBack = LocalDate.now().minusMonths(n);
 
-        return Integer.parseInt(matcher.group(1));
-
+        return nMonthsBack.format(BASIC_ISO_DATE);
     }
 
 
