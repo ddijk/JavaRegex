@@ -8,27 +8,30 @@ import static java.time.format.DateTimeFormatter.BASIC_ISO_DATE;
 
 public class TokenReplacer {
 
-    public static String replaceAllMonthTokens(String xml) {
-        final String token = "${for-month-(\\d)}";
-        return xml.replaceAll(token, replace(token));
+    final static String REGEX_FOR_MONTHS_BACK = "\\$\\{for-month-(\\d)\\}";
+    final static String REGEX_FOR_MONTHS_BACK_GREEDY = String.format(".*%s.*", REGEX_FOR_MONTHS_BACK);
+
+
+    public static String replaceFirstMonthTokens(String xml) {
+        return xml.replaceFirst(REGEX_FOR_MONTHS_BACK, calculateDate(xml));
 
     }
 
-    static String replace(String token) {
+    static String calculateDate(String xml) {
 
 
-        int n = getNumberOfMonthsFromToken(token);
+        int n = getNumberOfMonthsFromToken(xml);
 
         LocalDate oneMonthBack = LocalDate.now().minusMonths(n);
-        ;
+
         return oneMonthBack.format(BASIC_ISO_DATE);
 
     }
 
     static int getNumberOfMonthsFromToken(String inputXml) {
 
-        Pattern pattern = Pattern.compile(".*\\$\\{for-month-(\\d)\\}.*");
 
+        Pattern pattern = Pattern.compile(REGEX_FOR_MONTHS_BACK_GREEDY);
         Matcher matcher = pattern.matcher(inputXml);
         if (!matcher.matches()) {
             throw new IllegalArgumentException("token not found: " + inputXml);

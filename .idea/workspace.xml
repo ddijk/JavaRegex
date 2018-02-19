@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4dca1fb0-796a-419b-ab1b-71b937209981" name="Default" comment="" />
+    <list default="true" id="4dca1fb0-796a-419b-ab1b-71b937209981" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dijkrosoft/nl/TokenReplacer.java" afterPath="$PROJECT_DIR$/src/main/java/dijkrosoft/nl/TokenReplacer.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dijkrosoft/nl/AppTest.java" afterPath="$PROJECT_DIR$/src/test/java/dijkrosoft/nl/AppTest.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TokenReplacer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dijkrosoft/nl/TokenReplacer.java">
+      <file leaf-file-name="AppTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/dijkrosoft/nl/AppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="330">
+              <caret line="30" column="58" lean-forward="false" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -36,6 +40,9 @@
       <replace />
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -46,8 +53,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/dijkrosoft/nl/App.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/dijkrosoft/nl/AppTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/dijkrosoft/nl/TokenReplacer.java" />
+        <option value="$PROJECT_DIR$/src/test/java/dijkrosoft/nl/AppTest.java" />
       </list>
     </option>
   </component>
@@ -189,7 +196,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest.testRegex">
+  <component name="RunManager" selected="JUnit.AppTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -236,7 +243,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="AppTest.testRegex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppTest.testGreedyReplace" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="dijkrosoft.nl.*" />
@@ -248,7 +255,82 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="dijkrosoft.nl" />
       <option name="MAIN_CLASS_NAME" value="dijkrosoft.nl.AppTest" />
-      <option name="METHOD_NAME" value="testRegex" />
+      <option name="METHOD_NAME" value="testGreedyReplace" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="AppTest.testRegex3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="dijkrosoft.nl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="xmlparser" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="dijkrosoft.nl" />
+      <option name="MAIN_CLASS_NAME" value="dijkrosoft.nl.AppTest" />
+      <option name="METHOD_NAME" value="testRegex3" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="AppTest.testReplaceAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="dijkrosoft.nl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="xmlparser" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="dijkrosoft.nl" />
+      <option name="MAIN_CLASS_NAME" value="dijkrosoft.nl.AppTest" />
+      <option name="METHOD_NAME" value="testReplaceAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="AppTest.testReplaceOnlyFirst" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="dijkrosoft.nl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="xmlparser" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="dijkrosoft.nl" />
+      <option name="MAIN_CLASS_NAME" value="dijkrosoft.nl.AppTest" />
+      <option name="METHOD_NAME" value="testReplaceOnlyFirst" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -300,14 +382,20 @@
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
     </configuration>
-    <list size="2">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.AppTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.AppTest.testRegex" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.AppTest.testReplaceAll" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.AppTest.testRegex3" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.AppTest.testGreedyReplace" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.AppTest.testReplaceOnlyFirst" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.AppTest.testRegex" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.AppTest" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.AppTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.AppTest.testReplaceOnlyFirst" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.AppTest.testGreedyReplace" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.AppTest.testRegex3" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.AppTest.testReplaceAll" />
       </list>
     </recent_temporary>
   </component>
@@ -326,44 +414,44 @@
       <updated>1518793699009</updated>
       <workItem from="1518793701694" duration="2572000" />
       <workItem from="1518796687803" duration="1212000" />
-      <workItem from="1519032911413" duration="4306000" />
+      <workItem from="1519032911413" duration="6511000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AppTest - 2018.02.19 at 13h 03m 17s.xml">
+    <history-entry file="AppTest - 2018.02.19 at 16h 41m 06s.xml">
       <configuration name="AppTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest - 2018.02.19 at 13h 04m 55s.xml">
+    <history-entry file="AppTest - 2018.02.19 at 16h 56m 17s.xml">
       <configuration name="AppTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest - 2018.02.19 at 13h 05m 24s.xml">
+    <history-entry file="AppTest - 2018.02.19 at 16h 59m 33s.xml">
       <configuration name="AppTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest - 2018.02.19 at 13h 05m 56s.xml">
+    <history-entry file="AppTest - 2018.02.19 at 17h 01m 41s.xml">
       <configuration name="AppTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest - 2018.02.19 at 13h 07m 09s.xml">
+    <history-entry file="AppTest - 2018.02.19 at 17h 03m 36s.xml">
       <configuration name="AppTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest - 2018.02.19 at 16h 17m 59s.xml">
-      <configuration name="AppTest" configurationId="JUnit" />
+    <history-entry file="AppTest_testGreedyReplace - 2018.02.19 at 16h 44m 54s.xml">
+      <configuration name="AppTest.testGreedyReplace" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_testRegex - 2018.02.16 at 16h 41m 47s.xml">
-      <configuration name="AppTest.testRegex" configurationId="JUnit" />
+    <history-entry file="AppTest_testGreedyReplace - 2018.02.19 at 16h 46m 20s.xml">
+      <configuration name="AppTest.testGreedyReplace" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_testRegex - 2018.02.19 at 16h 22m 00s.xml">
-      <configuration name="AppTest.testRegex" configurationId="JUnit" />
+    <history-entry file="AppTest_testRegex3 - 2018.02.19 at 16h 35m 23s.xml">
+      <configuration name="AppTest.testRegex3" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_testRegex - 2018.02.19 at 16h 22m 30s.xml">
-      <configuration name="AppTest.testRegex" configurationId="JUnit" />
+    <history-entry file="AppTest_testRegex3 - 2018.02.19 at 16h 35m 39s.xml">
+      <configuration name="AppTest.testRegex3" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_testRegex - 2018.02.19 at 16h 24m 16s.xml">
-      <configuration name="AppTest.testRegex" configurationId="JUnit" />
+    <history-entry file="AppTest_testReplaceOnlyFirst - 2018.02.19 at 17h 01m 24s.xml">
+      <configuration name="AppTest.testReplaceOnlyFirst" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8090000" />
+    <option name="totallyTimeSpent" value="10295000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="39" y="43" width="2437" height="1288" extended-state="0" />
@@ -374,8 +462,8 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942164" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942164" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2538622" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -422,18 +510,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/dijkrosoft/nl/AppTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dijkrosoft/nl/TokenReplacer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="35" column="74" lean-forward="false" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="74" />
+        <state relative-caret-position="165">
+          <caret line="15" column="68" lean-forward="false" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dijkrosoft/nl/TokenReplacer.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/dijkrosoft/nl/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        <state relative-caret-position="330">
+          <caret line="30" column="58" lean-forward="false" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
           <folding />
         </state>
       </provider>
