@@ -22,6 +22,8 @@ public class TokenReplacer {
 
         int n = getNumberOfMonthsFromToken(xml);
 
+        System.out.println("n:"+n);
+
         LocalDate oneMonthBack = LocalDate.now().minusMonths(n);
 
         return oneMonthBack.format(BASIC_ISO_DATE);
