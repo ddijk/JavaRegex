@@ -8,7 +8,8 @@ import static java.time.format.DateTimeFormatter.BASIC_ISO_DATE;
 
 public class TokenReplacer {
 
-    final static String REGEX_FOR_MONTHS_BACK = "\\$\\{for-month-(\\d)\\}";
+    final static String REGEX_FOR_MONTHS_BACK = "\\$\\{for-month-(\\d{1,})\\}";
+    final static Pattern monthsPattern = Pattern.compile(REGEX_FOR_MONTHS_BACK);
 
 
     /**
@@ -17,9 +18,8 @@ public class TokenReplacer {
      * @return input with all the 'for-month-n' tokens replaced by actual dates.
      */
     public static String replaceMonthTokens(String input) {
-        Pattern p = Pattern.compile(REGEX_FOR_MONTHS_BACK);
 
-        Matcher m = p.matcher(input);
+        Matcher m = monthsPattern.matcher(input);
         StringBuffer sb = new StringBuffer();
         while (m.find()) {
             m.appendReplacement(sb, formatDate(Integer.parseInt(m.group(1))));

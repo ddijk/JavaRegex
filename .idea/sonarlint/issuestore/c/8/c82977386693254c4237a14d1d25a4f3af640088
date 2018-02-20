@@ -1,3 +1,4 @@
 
-Psquid:EmptyStatementUsageCheck"Remove this empty statement.(Åñ­õşÿÿÿÿ8°ßêš,
-Usquid:S1118":Add a private constructor to hide the implicit public one.(¡Ü8°ßêš,
+Usquid:S1118":Add a private constructor to hide the implicit public one.(¡Ü8ä€»‘›,
+tsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ˆåØÈùÿÿÿÿ8ä€»‘›,
+osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(±íˆÈ8ä€»‘›,
